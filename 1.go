@@ -3,15 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	entry := []string{"Jack","John","Jones"}
-	for i, val := range entry {
-	  fmt.Printf("At position %d, the character %s is present\n", i, val)
-	}
-}
 
-func makeRange(min, max int) []int {
-	a := make([]int, max-min+1)
-	for i := range a {
-		a[i] = min + i
+	sum := 0
+
+	for i := 1; i < 1000; i++ {
+		if i%3 == 0 || i%5 == 0 {
+			sum += i
+		}
 	}
+
+	fmt.Printf("The sum is %d\n", sum)
 }
