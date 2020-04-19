@@ -8,18 +8,23 @@ import (
 //isPalindrome takes an int as input
 //returns a bool reflecting whether ot not the int
 //is a palindrome
-func isPalindrome(number int) string {
+func isPalindrome(number int) bool {
 	numberString := strconv.Itoa(number)
-	reversedString := []string{}
+	reversedString := []byte{}
 	for i := range numberString {
 		i = len(numberString) - 1 - i
 		reversedString = append(reversedString, numberString[i])
 	}
-	return numberString
+	if numberString == string(reversedString) {
+		return true 
+	}else{
+		return false
+	}
 }
 
 func main() {
 	foo := 1234
-	stringFoo := isPalindrome(foo)
-	fmt.Printf("The string version of foo is %q", stringFoo)
+	fmt.Printf("Is %d a palindrome?\n %t\n", foo,  isPalindrome(foo))
+	yeet := 1111
+	fmt.Printf("Is %d a palindrome?\n %t\n", yeet, isPalindrome(yeet))
 }
