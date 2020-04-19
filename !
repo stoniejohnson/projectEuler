@@ -1,0 +1,4 @@
+4.go|10 col 18| expected expression
+4.go|12 col 6| expected 1 expression
+4.go|13 col 16| missing ',' in composite literal
+4.go|18 col 6| expected '(', found main
