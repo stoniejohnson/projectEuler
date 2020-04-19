@@ -2,21 +2,18 @@ package main
 
 import "fmt"
 
-func isPrime(number int) bool {
-	if number == 1 {
-		return false
-	}
-
-	for i := 2; i < number; i++ {
-		if number%i == 0 {
-			return false
+func largestPrimeFactor(number int) int {
+	i := 2
+	for number > 1 {
+		if number % i == 0 {
+			number /= i
+		}else{
+			i += 1
 		}
 	}
-	return true
-
+	return i
 }
-
 func main() {
-	result := isPrime(5)
-	fmt.Printf("%t", result)
+	foo := 600851475143
+	fmt.Printf("The largest prime factor of %d is %d", foo, largestPrimeFactor(foo))
 }
