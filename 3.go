@@ -15,5 +15,5 @@ func largestPrimeFactor(number int) int {
 }
 func main() {
 	foo := 600851475143
-	fmt.Printf("The largest prime factor of %d is %d", foo, largestPrimeFactor(foo))
+	fmt.Printf("The largest prime factor of %d is %d\n", foo, largestPrimeFactor(foo))
 }

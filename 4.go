@@ -22,9 +22,15 @@ func isPalindrome(number int) bool {
 	}
 }
 
+
 func main() {
-	foo := 1234
-	fmt.Printf("Is %d a palindrome?\n %t\n", foo,  isPalindrome(foo))
-	yeet := 1111
-	fmt.Printf("Is %d a palindrome?\n %t\n", yeet, isPalindrome(yeet))
+	largest := 0
+	for i := 900; i < 1000; i++ {
+		for j := 900; j < 1000; j++ {
+			if isPalindrome(i * j) && (i * j) > largest {
+				largest = i * j
+			}
+		}
+	}
+	fmt.Printf("The largest palindrome is %d\n", largest)
 }
